@@ -1,0 +1,19 @@
+.container-fluid {
+    overflow-x: auto;
+}
+
+.table {
+    table-layout: fixed;
+}
+
+.table th,
+.table td {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.type-name {
+    white-space: normal;
+    word-wrap: break-word;
+}
