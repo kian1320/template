@@ -25,7 +25,7 @@
 
                 <div class="mb-3">
                     <label for="">Expenses Type Name</label>
-                    <input type="text" name="name" value="{{ $btypes->name }}" class="form-control">
+                    <input type="text" name="name" value="{{ $types->name }}" class="form-control">
                 </div>
 
 

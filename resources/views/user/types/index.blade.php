@@ -18,8 +18,8 @@
     <br>
     <div class="card">
         <div class="card-header">
-            <h4>View Budget Types <a href="{{ 'add-btypes' }}" class="btn btn-primary btn-sm float-end">Add
-                    Budget Type</a></h4>
+            <h4>View Expense Types <a href="{{ 'add-types' }}" class="btn btn-primary btn-sm float-end">Add
+                    Expense Type</a></h4>
 
         </div>
 
@@ -32,7 +32,7 @@
                 <tr>
 
                     <th>name</th>
-
+                    <th>Sub Types</th>
                     <th>Edit</th>
                     <th>Delete</th>
 
@@ -52,9 +52,14 @@
 
 
 
+                        <td align="center">
+                            <a href="{{ url('user/edit-types/' . $item->id) }}" class="btn btn-outline-primary">Edit</a>
+                        </td>
 
                         <td align="center">
                             <a href="{{ url('user/edit-types/' . $item->id) }}" class="btn btn-outline-success">Edit</a>
+                        </td>
+
                         <td align="center">
                             <a href="{{ url('user/delete-types/' . $item->id) }}" class="btn btn-outline-danger"
                                 onclick="event.preventDefault(); if(confirm('Are you sure you want to delete?')) { document.getElementById('delete-form-{{ $item->id }}').submit(); }">
