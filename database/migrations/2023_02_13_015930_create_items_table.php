@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('specification');
             $table->string('software');
             $table->string('status');
+            $table->string('photo')->nullable();
             $table->integer('created_by');
             $table->timestamps();
         });

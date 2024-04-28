@@ -19,7 +19,7 @@
                 </div>
             @endif
 
-            <form action="{{ 'add-items' }}" method="POST">
+            <form action="{{ 'add-items' }}" method="POST" enctype="multipart/form-data">
                 @csrf
 
                 <div class="mb-3">
@@ -55,6 +55,11 @@
                         <option value="defective">Defective</option>
                         <option value="repairing">Repairing</option>
                     </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="photo">Photo</label>
+                    <input type="file" name="photo" class="form-control-file">
                 </div>
 
                 <div class="mb-3">

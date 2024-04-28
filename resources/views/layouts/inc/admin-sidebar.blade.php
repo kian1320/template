@@ -10,20 +10,19 @@
                 </a>
 
 
-                <a class="nav-link {{ Request::is('admin/users') ? 'active' : '' }}" href="{{ url('admin/users') }}">
+                <a class="nav-link {{ Request::is('admin/add-items') ? 'active' : '' }}"
+                    href="{{ url('admin/add-items') }}">
                     <div class="sb-nav-link-icon"><i class="fas fa-user fa-fw"></i></div>
-                    Users
+                    Add
                 </a>
 
-                <div class="sb-sidenav-menu-heading">Addons</div>
-                <a class="nav-link" href="charts.html">
-                    <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
-                    Charts
+
+                <a class="nav-link {{ Request::is('admin/items') ? 'active' : '' }}" href="{{ url('admin/items') }}">
+                    <div class="sb-nav-link-icon"><i class="fas fa-user fa-fw"></i></div>
+                    View
                 </a>
-                <a class="nav-link" href="tables.html">
-                    <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                    Tables
-                </a>
+
+
             </div>
         </div>
         <div class="sb-sidenav-footer">

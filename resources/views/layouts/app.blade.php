@@ -18,48 +18,9 @@
 
     <!-- Styles -->
     <link href="{{ asset('assets/css/styles.css') }}" rel="stylesheet">
-    <style>
-        body {
-            background-color: #222;
-            color: #fff;
-        }
-
-        .navbar-light {
-            background-color: #333;
-        }
-
-        .navbar-brand {
-            color: #fff;
-        }
-
-        .navbar-toggler-icon {
-            background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cline stroke='%23fff' stroke-width='2' stroke-linecap='round' x1='4' y1='7' x2='26' y2='7'/%3E%3Cline stroke='%23fff' stroke-width='2' stroke-linecap='round' x1='4' y1='15' x2='26' y2='15'/%3E%3Cline stroke='%23fff' stroke-width='2' stroke-linecap='round' x1='4' y1='23' x2='26' y2='23'/%3E%3C/svg%3E");
-        }
-
-        .nav-link {
-            color: #fff;
-        }
-
-        .dropdown-menu {
-            background-color: #333;
-        }
-
-        .dropdown-item {
-            color: #fff;
-        }
-
-        .dropdown-item:hover {
-            background-color: #555;
-        }
-
-        .py-4 {
-            color: #fff;
-        }
-    </style>
 </head>
 
-<body
-    style="background-image: url('{{ URL('assets/img/download.png') }}'); background-size: contain; background-repeat: no-repeat; background-position: center; background-attachment: fixed;">
+<body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">

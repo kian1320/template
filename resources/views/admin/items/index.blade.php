@@ -2,8 +2,6 @@
 @section('content')
 @section('title', 'Items')
 
-
-
 <link rel="stylesheet" href="//cdn.datatables.net/1.13.2/css/jquery.dataTables.min.css">
 <div class="container-fluid px-4">
     <br>
@@ -19,7 +17,6 @@
             <table id="Itemstable" class="table table-bordered">
                 <thead>
                     <tr>
-
                         <th>Item Name</th>
                         <th>Department</th>
                         <th>Type</th>
@@ -27,7 +24,7 @@
                         <th>Created by</th>
                         <th>Software</th>
                         <th>Stuatus</th>
-                        <th>Repair History</th>
+                        <th>Photo</th>
                         <th>Edit</th>
                         <th>Delete</th>
                     </tr>
@@ -35,7 +32,6 @@
                 <tbody>
                     @foreach ($Items as $item)
                         <tr>
-
                             <td>{{ $item->name }}</td>
                             <td>{{ $item->department }}</td>
                             <td>{{ $item->type }}</td>
@@ -45,32 +41,27 @@
                             <td>{{ $item->status }}</td>
 
 
-
-
-                            <td align="center">
-                                <a href="{{ url('admin/repairs/' . $item->id) }}"
-                                    class="btn btn-outline-primary">Add/View</a>
+                            <td>
+                                @if ($item->photo)
+                                    <img src="{{ asset($item->photo) }}" alt="Item Photo" style="max-width: 100px;">
+                                @else
+                                    No Photo Available
+                                @endif
                             </td>
+
 
                             <td align="center">
                                 <a href="{{ url('admin/edit-items/' . $item->id) }}"
                                     class="btn btn-outline-success">Edit</a>
                             </td>
-
                             <td align="center">
                                 <a href="{{ url('admin/delete-items/' . $item->id) }}"
                                     class="btn btn-outline-danger">Delete</a>
                             </td>
-
-
                         </tr>
                     @endforeach
                 </tbody>
-
-
-
             </table>
-
         </div>
     </div>
 </div>
